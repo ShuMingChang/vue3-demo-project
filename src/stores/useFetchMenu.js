@@ -9,7 +9,7 @@ const state = reactive({
 export function useFetchMenu() {
   const fetchMenu = async () => {
     state.isLoading = true
-    const { data } = await useFetch('/menu')
+    const { data } = await useFetch('/menu').json()
     state.result = data.value
     state.isLoading = false
   }

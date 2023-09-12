@@ -28,10 +28,15 @@ export const handlers = [
     // If authenticated, return a mocked user details
     return res(
       ctx.status(200),
-      ctx.json({
-        name: 'Terry',
-        age: 37,
-      }),
+      ctx.json([
+        {
+          name: 'Jerry',
+          age: 37,
+        }, {
+          name: 'Tina',
+          age: 30,
+        },
+      ]),
     )
   }),
   rest.get('/menu', (req, res, ctx) => {

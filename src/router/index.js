@@ -28,6 +28,7 @@ const router = createRouter({
       path: '/courseFour',
       name: 'courseFour',
       component: () => import('../views/CourseFourView.vue'),
+      meta: { i18n: 'page.courseFour' },
     },
     {
       path: '/courseFive',
@@ -38,6 +39,21 @@ const router = createRouter({
       path: '/courseSix',
       name: 'courseSix',
       component: () => import('../views/CourseSixView.vue'),
+    },
+    {
+      path: '/courseSeven',
+      name: 'courseSeven',
+      component: () => import('../views/CourseSevenView.vue'),
+      // meta: { i18n: 'page.courseSeven' },
+      // redirect: { name: 'weather' },
+      // children: [
+      //   {
+      //     name: 'weather',
+      //     path: 'weather',
+      //     component: () => import('@/components/TheWeatherList.vue'),
+      //     meta: { i18n: 'page.courseSeven.weather' },
+      //   },
+      // ],
     },
   ],
 })

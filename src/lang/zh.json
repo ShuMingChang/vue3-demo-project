@@ -1,0 +1,117 @@
+{
+  "code": "zh-TW",
+  "common": {
+    "label": {
+      "username": "用户名",
+      "balance": "余额"
+    },
+    "button": {
+      "submit": "送出"
+    }
+  },
+  "tradingPage": {
+    "title": "资金",
+    "deposit": {
+      "tab": "充值",
+      "label": {
+        "tips": "温馨提示",
+        "recipientName": "收款姓名",
+        "recipientAccount": "收款账号",
+        "depositAmount": "存入金额",
+        "remittanceName": "汇款姓名",
+        "transferRemark": "转账备注",
+        "OperatingDescription": "操作说明"
+      },
+      "content": {
+        "tipsContent": "最低充值金额 {min} ，最大充值金额 {max} ",
+        "OperatingDescriptionContent": "支付时请注金额和订单号"
+      },
+      "placeholder": {
+        "pleaseEnterTheDepositAmount": "请输入@:tradingPage.deposit.label.depositAmount",
+        "pleaseEnterTheSenderName": "请输入@:tradingPage.deposit.label.remittanceName",
+        "pleaseEnterTheTransferRemarks": "请输入@:tradingPage.deposit.label.transferRemark"
+      }
+    },
+    "withdraw": {
+      "withdrawalType": {
+        "USDT": "USDT",
+        "bankCard": "银行卡"
+      },
+      "tab": "提款",
+      "label": {
+        "withdrawalMethod": "提款方式",
+        "amountLimit": "金额限制",
+        "withdrawalAmount": "提款金额",
+        "quantity": "数量",
+        "transactionFee": "手续费",
+        "withdrawalPassword": "提款密码",
+        "confirmWithdrawalPassword": "确认提款密码"
+      },
+      "placeholder": {
+        "pleaseEnterTheWithdrawalAmount": "请输入提款金额",
+        "pleaseEnterTheWithdrawalPassword": "请输入提款密码",
+        "pleaseConfirmTheWithdrawalPassword": "请确认提款密码"
+      }
+    }
+  },
+  "modules": {
+    "numberFormats": {
+      "currency": {
+        "style": "currency",
+        "currency": "TWD",
+        "currencyDisplay": "symbol",
+        "useGrouping": true
+      }
+    },
+    "veeValidate": {
+      "messages": {
+        "_default": "{field} 的值無效",
+        "alpha": "{field} 須以英文組成",
+        "alpha_dash": "{field} 須以英數、破折號及底線組成",
+        "alpha_num": "{field} 須以英數組成",
+        "alpha_spaces": "{field} 須以英文及空格組成",
+        "between": "{field} 須介於 0:{min} 至 1:{max}之間",
+        "confirmed": " {field} 不一致",
+        "digits": "{field} 須為 0:{length} 位數字",
+        "dimensions": "{field} 圖片尺寸不正確。須為 0:{width} x 1:{height} 像素",
+        "email": "{field} 須為有效的電子信箱",
+        "not_one_of": "{field} 的選項無效",
+        "ext": "{field} 須為有效的檔案",
+        "image": "{field} 須為圖片",
+        "one_of": "{field} 的選項無效",
+        "integer": "{field} 須為整數",
+        "length": "{field} 的長度須為 0:{length}",
+        "max": "{field} 不能大於 0:{length} 個字元",
+        "max_value": "{field} 不得大於 0:{max}",
+        "mimes": "{field} 須為有效的檔案類型",
+        "min": "{field} 不能小於 0:{length} 個字元",
+        "min_value": "{field} 不得小於 0:{min}",
+        "numeric": "{field} 須為數字",
+        "regex": "{field} 的格式錯誤",
+        "required": "{field} 為必填",
+        "required_if": "{field} 為必填",
+        "size": "{field} 的檔案須小於 0:{size}KB",
+        "url": "{field} 須為有效的URL",
+        "charAndDigit": "{field} 仅支持字母+数字"
+      }
+    }
+  },
+  "page": {
+    "courseFour": {
+      "context": {
+        "welcome": "欢迎1！！"
+      }
+    },
+    "courseSeven": {
+      "label": {
+        "account": "帳號"
+      },
+      "placeholder": {
+        "account": "請輸入@:page.courseSeven.label.account"
+      },
+      "context": {
+        "welcome": "欢迎 ！！"
+      }
+    }
+  }
+}

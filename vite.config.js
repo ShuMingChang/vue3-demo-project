@@ -10,15 +10,21 @@ import Icons from 'unplugin-icons/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  publicDir: 'public',
+  build: {
+    target: 'esnext',
+  },
   plugins: [
-    vue(),
+    vue({
+      // include: '**/*.json',
+    }),
     vueJsx(),
     Unocss(),
     Icons({
       autoInstall: true,
     }),
     AutoImport({
-      imports: ['vue', '@vueuse/core'],
+      imports: ['vue', '@vueuse/core', 'vue-i18n', 'vue-router'],
       vueTemplate: false,
       eslintrc: {
         enabled: true, // Default `false`

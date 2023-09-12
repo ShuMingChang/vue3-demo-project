@@ -6,7 +6,12 @@ const count = ref(0)
 function addCount() {
   count.value++
 }
-
+function functionCount() {
+  return `${count.value} times`
+}
+const computedCount = computed(() => {
+  return `${count.value} times`
+})
 /**
  * ref two way binding
  */
@@ -41,8 +46,9 @@ function setUser() {
 }
 function setIncorrectExample() {
   user = {
-    name: 'Ariel',
+    name: 'Tina',
     age: 29,
+    phoneList: ['0999333333', '0999555555'],
   }
 }
 
@@ -56,7 +62,7 @@ const refUser = ref({
   age: 40,
 })
 
-function serRefUser() {
+function setRefUser() {
   refUser.value = {
     name: 'Jenny',
     age: 18,
@@ -73,6 +79,8 @@ export default {
 <template>
   <h1>ref & reactive</h1>
   <h2>{{ count }}</h2>
+  <h2> {{ functionCount() }} </h2>
+  <h2> {{ computedCount }} </h2>
   <button @click="addCount">
     Add count
   </button>
@@ -103,8 +111,8 @@ export default {
   <hr>
   <h2>{{ refUser.name }}</h2>
   <h2>{{ refUser.age }}</h2>
-  <button @click="serRefUser">
-    serRefUser
+  <button @click="setRefUser">
+    setRefUser
   </button>
 </template>
 

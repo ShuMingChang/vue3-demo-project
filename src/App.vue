@@ -1,40 +1,40 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 
-const mode = import.meta.env.MODE
-const url = import.meta.env.VITE_WEATHER_BUREAU_URL
-const test = import.meta.env.VITE_TESTTEST
-function drawWave() {
-  const canvas = document.getElementById('myCanvas')
-  const ctx = canvas.getContext('2d')
-  const width = canvas.width
-  const height = canvas.height
+// const mode = import.meta.env.MODE
+// const url = import.meta.env.VITE_WEATHER_BUREAU_URL
+// const test = import.meta.env.VITE_TESTTEST
+// function drawWave() {
+//   const canvas = document.getElementById('myCanvas')
+//   const ctx = canvas.getContext('2d')
+//   const width = canvas.width
+//   const height = canvas.height
 
-  ctx.clearRect(0, 0, width, height)
-  // 設置波浪曲線樣式
-  ctx.lineWidth = 3
-  ctx.strokeStyle = '#0077be'
-  // ctx.fillStyle = '#0077be'
+//   ctx.clearRect(0, 0, width, height)
+//   // 設置波浪曲線樣式
+//   ctx.lineWidth = 3
+//   ctx.strokeStyle = '#0077be'
+//   // ctx.fillStyle = '#0077be'
 
-  // 開始繪製波浪曲線
-  ctx.beginPath()
-  ctx.moveTo(0, height / 2)
-  for (let i = 0; i < width; i++) {
-    const x = i
-    const y = height / 2 + Math.sin(i / 40) * 40 + Math.sin(i / 40) * 40 + Math.sin(i / 40) * 40 + Math.sin(i / 40) * 40
-    ctx.lineTo(x, y)
-  }
-  // ctx.lineTo(width, height)
-  // ctx.lineTo(0, height)
-  // ctx.closePath()
-  ctx.stroke()
-  // ctx.fill()
-}
+//   // 開始繪製波浪曲線
+//   ctx.beginPath()
+//   ctx.moveTo(0, height / 2)
+//   for (let i = 0; i < width; i++) {
+//     const x = i
+//     const y = height / 2 + Math.sin(i / 40) * 40 + Math.sin(i / 40) * 40 + Math.sin(i / 40) * 40 + Math.sin(i / 40) * 40
+//     ctx.lineTo(x, y)
+//   }
+//   // ctx.lineTo(width, height)
+//   // ctx.lineTo(0, height)
+//   // ctx.closePath()
+//   ctx.stroke()
+//   // ctx.fill()
+// }
 
-const isDarkTheme = ref(false)
-function clickHandler() {
-  isDarkTheme.value = !isDarkTheme.value
-}
+// const isDarkTheme = ref(false)
+// function clickHandler() {
+//   isDarkTheme.value = !isDarkTheme.value
+// }
 </script>
 
 <template>
@@ -62,17 +62,26 @@ function clickHandler() {
         <RouterLink :to="{ name: 'courseSix' }">
           CourseSix
         </RouterLink>
+        <RouterLink :to="{ name: 'courseSeven' }">
+          CourseSeven
+        </RouterLink>
       </nav>
     </div>
   </header>
+  <RouterView />
   <!-- <img src="favicon.svg" alt="" w-50px> -->
   <!-- <h1>{{ mode }}</h1> -->
   <!-- <h2> {{ url }} </h2> -->
   <!-- <h3>{{ test }}</h3> -->
-  <RouterView :class="{ darkTerry: isDarkTheme }" class="bg-container" />
+  <!-- <br>
   <button @click="clickHandler">
     dark
   </button>
+  <div :class="{ darkTerry: isDarkTheme }">
+    <div class="w-[300px] h-[300px]  bg-contain bg-no-repeat bg-context-bg" />
+    <div class="w-[300px] h-[300px]  bg-contain bg-no-repeat bg-cat-bg" />
+    <div class="w-[300px] h-[300px]  bg-contain bg-no-repeat bg-test-bg" />
+  </div> -->
   <!-- <canvas id="myCanvas" width="500" height="500" /> -->
   <!-- <button @click="drawWave">
     Draw Curve
@@ -134,5 +143,9 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+}
+.background-test {
+  /* @apply bg-[url('/logo.svg')] */
+  /* @apply bg-terryqqq */
 }
 </style>

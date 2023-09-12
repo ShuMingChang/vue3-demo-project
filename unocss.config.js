@@ -1,12 +1,15 @@
 import {
   defineConfig,
+  presetAttributify,
   presetIcons,
+  presetTypography,
   presetUno,
+  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
 
-import presetTheme from 'unocss-preset-theme'
+import presetTheme from '@minmin614/unocss-preset-theme'
 
 export default defineConfig({
   shortcuts: [
@@ -26,6 +29,9 @@ export default defineConfig({
       'text': 'rgba(0, 0, 0, 0.88)',
       'container': '#ffffff',
       'border': '#d9d9d9',
+      'context-bg': 'url(https://octodex.github.com/images/heisencat.png)',
+      'cat-bg': 'url(https://octodex.github.com/images/spidertocat.png)',
+      'test-bg': 'url(https://octodex.github.com/images/minion.png)',
     },
     spacing: {
       xss: '4px',
@@ -35,22 +41,28 @@ export default defineConfig({
       lg: '24px',
       xl: '32px',
     },
+    extend: {
+      backgroundImage: {
+        terryqqq: 'url(\'/logo.svg\')',
+      },
+    },
+
   },
   presets: [
     presetUno(),
-    // presetAttributify(),
+    presetAttributify(),
     presetIcons({
       scale: 1.2,
       warn: true,
     }),
-    // presetTypography(),
-    // presetWebFonts({
-    //   fonts: {
-    //     sans: 'DM Sans',
-    //     serif: 'DM Serif Display',
-    //     mono: 'DM Mono',
-    //   },
-    // }),
+    presetTypography(),
+    presetWebFonts({
+      fonts: {
+        sans: 'DM Sans',
+        serif: 'DM Serif Display',
+        mono: 'DM Mono',
+      },
+    }),
     presetTheme({
       theme: {
         darkTerry: {
@@ -60,6 +72,9 @@ export default defineConfig({
             'border': '#424242',
             'container': '#141414',
             'text': 'rgba(255, 255, 255, 0.85)',
+            'context-bg': 'url(https://octodex.github.com/images/homercat.png)',
+            'cat-bg': 'url(https://octodex.github.com/images/minion.png)',
+            'test-bg': 'url(https://octodex.github.com/images/minion.png)',
           },
         },
         compact: {
