@@ -12,6 +12,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@flaregun-net/proxyflare-for-pages": "^0.1.0",
     "@iconify-json/ci": "^1.1.5",
     "@iconify-json/line-md": "^1.1.18",
     "@unocss/reset": "^0.48.0",
