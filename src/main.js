@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { getAnalytics } from 'firebase/analytics'
 import { initializeApp } from 'firebase/app'
-import { getAll, getRemoteConfig } from 'firebase/remote-config'
+import { getAll, getBoolean, getRemoteConfig } from 'firebase/remote-config'
 import { worker } from './mocks/browser'
 
 import App from './App.vue'
@@ -37,8 +37,10 @@ const firebaseConfig = {
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig)
 const analytics = getAnalytics(firebaseApp)
-const remoteConfig = getRemoteConfig(firebaseApp)
+const remoteConfig = await getRemoteConfig(firebaseApp)
 const allConfig = await getAll(remoteConfig)
+const isTest = getBoolean(remoteConfig, 'isTest')
+console.log('isTest:', isTest)
 console.log(allConfig)
 const app = createApp(App)
 
